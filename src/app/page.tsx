@@ -12,7 +12,7 @@ export default function Home() {
           A. Ferrere
         </span>
         <div className="hidden md:flex items-center gap-8">
-          {["Distinction", "Projet", "Biographie"].map((item) => (
+          {["Distinction", "Projet", "Publication", "Biographie"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -212,6 +212,68 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+
+      {/* ══════════════════════════════════════════
+          PUBLICATION
+      ══════════════════════════════════════════ */}
+      <section id="publication" className="px-8 md:px-14 py-24 md:py-32">
+        <div className="max-w-5xl">
+
+          <SectionLabel label="Publication" />
+
+          <div className="mt-14 flex flex-col sm:flex-row gap-10 md:gap-16 items-start">
+
+            {/* Book cover */}
+            <a
+              href="https://www.amazon.com/Esth%C3%A9tique-photographie-chantier-Fran%C3%A7ois-Soulages-ebook/dp/B0D9KKY61Q/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 group"
+            >
+              <Image
+                src="/e-book.jpg"
+                alt="Esthétique de la photographie de chantier"
+                width={400}
+                height={566}
+                className="w-[160px] md:w-[200px] h-auto shadow-md group-hover:shadow-lg transition-shadow duration-300"
+              />
+            </a>
+
+            {/* Book info */}
+            <div className="pt-1">
+              <p className="text-[10px] tracking-[0.25em] uppercase text-terracotta font-medium mb-3">
+                E-book · L&rsquo;Harmattan
+              </p>
+              <h3 className="font-serif font-light text-2xl md:text-3xl text-ink leading-snug mb-2">
+                Esthétique de la photographie de chantier
+              </h3>
+              <p className="font-serif italic text-base text-ink/50 mb-5">
+                Sous la direction de François Soulages &amp; Angèle Ferrere
+              </p>
+              <p className="text-muted text-[15px] leading-relaxed max-w-md mb-8">
+                Publié dans la Collection Eidos, Série Photographie aux éditions L&rsquo;Harmattan,
+                cet ouvrage explore l&rsquo;esthétique de la photographie de chantier — un corpus
+                photographique peu étudié, à la croisée de l&rsquo;histoire de l&rsquo;architecture,
+                du travail et des représentations visuelles.
+              </p>
+              <a
+                href="https://www.amazon.com/Esth%C3%A9tique-photographie-chantier-Fran%C3%A7ois-Soulages-ebook/dp/B0D9KKY61Q/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-terracotta-light px-5 py-3 hover:bg-terracotta hover:text-cream transition-colors duration-300 group"
+              >
+                <span className="w-1 h-1 rounded-full bg-terracotta group-hover:bg-cream transition-colors duration-300" />
+                <span className="text-[11px] tracking-[0.18em] uppercase text-terracotta font-medium group-hover:text-cream transition-colors duration-300">
+                  Disponible sur Amazon
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
