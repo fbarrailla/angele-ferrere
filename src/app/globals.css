@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
+/* ── Custom Properties ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: oklch(96.5% 0.013 65);
+  --ink: oklch(17% 0.01 50);
+  --terracotta: oklch(54% 0.12 40);
+  --terracotta-light: oklch(94% 0.035 40);
+  --border: oklch(88% 0.012 65);
+  --muted: oklch(55% 0.01 50);
 }
 
+/* ── Tailwind Theme ── */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-light: var(--terracotta-light);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-instrument);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-instrument), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@utility animate-fade-up {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 1s ease both;
+}
+
+/* ── Contact Sheet Grid (hero texture) ── */
+.contact-grid {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 119px,
+      var(--ink) 119px,
+      var(--ink) 120px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 89px,
+      var(--ink) 89px,
+      var(--ink) 90px
+    );
+}
+
+/* ── Vertical rule animation ── */
+@keyframes growDown {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+.rule-grow {
+  transform-origin: top;
+  animation: growDown 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 400ms;
 }
