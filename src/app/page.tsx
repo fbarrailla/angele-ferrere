@@ -42,6 +42,18 @@ export default function Home() {
           aria-hidden="true"
         />
 
+        {/* Portrait — upper right */}
+        <div className="absolute right-8 md:right-14 top-24 hidden md:block animate-fade-in" style={{ animationDelay: "300ms" }}>
+          <Image
+            src="/hero.jpeg"
+            alt="Angèle Ferrere"
+            width={196}
+            height={257}
+            className="w-[200px] lg:w-[260px] h-auto object-cover"
+            priority
+          />
+        </div>
+
         {/* Name */}
         <div className="relative z-10 mb-10">
           <h1
