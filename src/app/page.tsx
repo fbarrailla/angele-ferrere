@@ -282,10 +282,23 @@ export default function Home() {
         <span className="font-serif italic text-ink/35 text-sm">
           Angèle Ferrere
         </span>
-        <p className="text-[11px] text-ink/30 tracking-wide max-w-xs text-left sm:text-right leading-relaxed">
-          La Bourse de recherche curatoriale Martine Franck bénéficie du soutien de la
-          Fondation d&rsquo;entreprise Linklaters.
-        </p>
+        <div className="flex flex-col gap-2 text-left sm:text-right">
+          <p className="text-[11px] text-ink/30 tracking-wide max-w-xs leading-relaxed">
+            La Bourse de recherche curatoriale Martine Franck bénéficie du soutien de la
+            Fondation d&rsquo;entreprise Linklaters.
+          </p>
+          <p className="text-[11px] text-ink/25">
+            Created with ❤️ by{" "}
+            <a
+              href="https://tontonfrancky.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-terracotta transition-colors duration-200"
+            >
+              Francky
+            </a>
+          </p>
+        </div>
       </footer>
 
     </div>
