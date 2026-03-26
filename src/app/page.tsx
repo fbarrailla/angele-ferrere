@@ -227,56 +227,90 @@ export default function Home() {
 
           <SectionLabel label="Publication" />
 
-          <div className="mt-14 flex flex-col sm:flex-row gap-10 md:gap-16 items-start">
+          <div className="mt-14 space-y-14">
 
-            {/* Book cover */}
-            <a
-              href="https://www.amazon.com/Esth%C3%A9tique-photographie-chantier-Fran%C3%A7ois-Soulages-ebook/dp/B0D9KKY61Q/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 group"
-            >
-              <Image
-                src="/e-book.jpg"
-                alt="Esthétique de la photographie de chantier"
-                width={400}
-                height={566}
-                className="w-[160px] md:w-[200px] h-auto shadow-md group-hover:shadow-lg transition-shadow duration-300"
-              />
-            </a>
-
-            {/* Book info */}
-            <div className="pt-1">
-              <p className="text-[10px] tracking-[0.25em] uppercase text-terracotta font-medium mb-3">
-                E-book · L&rsquo;Harmattan
-              </p>
-              <h3 className="font-serif font-light text-2xl md:text-3xl text-ink leading-snug mb-2">
-                Esthétique de la photographie de chantier
-              </h3>
-              <p className="font-serif italic text-base text-ink/50 mb-5">
-                Sous la direction de François Soulages &amp; Angèle Ferrere
-              </p>
-              <p className="text-muted text-[15px] leading-relaxed max-w-md mb-8">
-                La photographie de chantier s&rsquo;insère dans un champ artistique et théorique
-                très large sur les liens entre art et chantier, qui rassemble, depuis une vingtaine
-                d&rsquo;années, historiens de l&rsquo;art, anthropologues, architectes et artistes.
-                Comment le chantier, espace à la fois quotidien et spectaculaire, devient-il un objet
-                esthétique de la photographie&nbsp;? Le basculement de la valeur documentaire de la
-                photographie de chantier à sa valeur esthétique constitue en effet l&rsquo;un des
-                enjeux principaux de l&rsquo;analyse apportée ici.
-              </p>
+            {/* ── Publication 1 ── */}
+            <div className="flex flex-col sm:flex-row gap-10 md:gap-16 items-start">
               <a
                 href="https://www.amazon.com/Esth%C3%A9tique-photographie-chantier-Fran%C3%A7ois-Soulages-ebook/dp/B0D9KKY61Q/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-terracotta-light px-5 py-3 hover:bg-terracotta hover:text-cream transition-colors duration-300 group"
+                className="shrink-0 group"
               >
-                <span className="w-1 h-1 rounded-full bg-terracotta group-hover:bg-cream transition-colors duration-300" />
-                <span className="text-[11px] tracking-[0.18em] uppercase text-terracotta font-medium group-hover:text-cream transition-colors duration-300">
-                  Disponible sur Amazon
-                </span>
+                <Image
+                  src="/e-book.jpg"
+                  alt="Esthétique de la photographie de chantier"
+                  width={400}
+                  height={566}
+                  className="w-[160px] md:w-[200px] h-auto shadow-md group-hover:shadow-lg transition-shadow duration-300"
+                />
               </a>
+              <div className="pt-1">
+                <p className="text-[10px] tracking-[0.25em] uppercase text-terracotta font-medium mb-3">
+                  E-book · L&rsquo;Harmattan
+                </p>
+                <h3 className="font-serif font-light text-2xl md:text-3xl text-ink leading-snug mb-2">
+                  Esthétique de la photographie de chantier
+                </h3>
+                <p className="font-serif italic text-base text-ink/50 mb-5">
+                  Sous la direction de François Soulages &amp; Angèle Ferrere
+                </p>
+                <p className="text-muted text-[15px] leading-relaxed max-w-md mb-8">
+                  La photographie de chantier s&rsquo;insère dans un champ artistique et théorique
+                  très large sur les liens entre art et chantier, qui rassemble, depuis une vingtaine
+                  d&rsquo;années, historiens de l&rsquo;art, anthropologues, architectes et artistes.
+                  Comment le chantier, espace à la fois quotidien et spectaculaire, devient-il un objet
+                  esthétique de la photographie&nbsp;? Le basculement de la valeur documentaire de la
+                  photographie de chantier à sa valeur esthétique constitue en effet l&rsquo;un des
+                  enjeux principaux de l&rsquo;analyse apportée ici.
+                </p>
+                <a
+                  href="https://www.amazon.com/Esth%C3%A9tique-photographie-chantier-Fran%C3%A7ois-Soulages-ebook/dp/B0D9KKY61Q/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-terracotta-light px-5 py-3 hover:bg-terracotta hover:text-cream transition-colors duration-300 group"
+                >
+                  <span className="w-1 h-1 rounded-full bg-terracotta group-hover:bg-cream transition-colors duration-300" />
+                  <span className="text-[11px] tracking-[0.18em] uppercase text-terracotta font-medium group-hover:text-cream transition-colors duration-300">
+                    Disponible sur Amazon
+                  </span>
+                </a>
+              </div>
             </div>
+
+            <div className="h-px bg-ink/10" />
+
+            {/* ── Publication 2 ── */}
+            <div className="flex flex-col sm:flex-row gap-10 md:gap-16 items-start">
+              <div className="shrink-0">
+                <Image
+                  src="/ebook-02.jpeg"
+                  alt="Femmes photographes : regards sur la ville et valorisation d'une collection"
+                  width={400}
+                  height={533}
+                  className="w-[160px] md:w-[200px] h-auto shadow-md"
+                />
+              </div>
+              <div className="pt-1">
+                <p className="text-[10px] tracking-[0.25em] uppercase text-terracotta font-medium mb-3">
+                  Article · Hypotheses / BnF · Novembre 2021
+                </p>
+                <h3 className="font-serif font-light text-2xl md:text-3xl text-ink leading-snug mb-2">
+                  Femmes Photographes : Regards sur la Ville et Valorisation d&rsquo;une Collection
+                </h3>
+                <p className="font-serif italic text-base text-ink/50 mb-5">
+                  Angèle Ferrere &mdash; (1/2)
+                </p>
+                <p className="text-muted text-[15px] leading-relaxed max-w-md">
+                  La BnF accueille tous les ans des chercheurs associés qui conduisent un travail au
+                  plus près de ses collections. Angèle Ferrere, lauréate 2020 de la bourse Louis
+                  Roederer pour la photographie, rend compte de son projet qui vise à valoriser
+                  l&rsquo;œuvre de photographes femmes dans les collections de la Bibliothèque
+                  nationale de France.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
