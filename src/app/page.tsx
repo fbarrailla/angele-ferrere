@@ -257,10 +257,13 @@ export default function Home() {
                 Sous la direction de François Soulages &amp; Angèle Ferrere
               </p>
               <p className="text-muted text-[15px] leading-relaxed max-w-md mb-8">
-                Publié dans la Collection Eidos, Série Photographie aux éditions L&rsquo;Harmattan,
-                cet ouvrage explore l&rsquo;esthétique de la photographie de chantier — un corpus
-                photographique peu étudié, à la croisée de l&rsquo;histoire de l&rsquo;architecture,
-                du travail et des représentations visuelles.
+                La photographie de chantier s&rsquo;insère dans un champ artistique et théorique
+                très large sur les liens entre art et chantier, qui rassemble, depuis une vingtaine
+                d&rsquo;années, historiens de l&rsquo;art, anthropologues, architectes et artistes.
+                Comment le chantier, espace à la fois quotidien et spectaculaire, devient-il un objet
+                esthétique de la photographie&nbsp;? Le basculement de la valeur documentaire de la
+                photographie de chantier à sa valeur esthétique constitue en effet l&rsquo;un des
+                enjeux principaux de l&rsquo;analyse apportée ici.
               </p>
               <a
                 href="https://www.amazon.com/Esth%C3%A9tique-photographie-chantier-Fran%C3%A7ois-Soulages-ebook/dp/B0D9KKY61Q/"
