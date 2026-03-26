@@ -45,11 +45,11 @@ export default function Home() {
         {/* Portrait — upper right */}
         <div className="absolute right-8 md:right-14 top-24 hidden md:block animate-fade-in" style={{ animationDelay: "300ms" }}>
           <Image
-            src="/hero.jpeg"
+            src="/hero.jpg"
             alt="Angèle Ferrere"
-            width={196}
-            height={257}
-            className="w-[200px] lg:w-[260px] h-auto object-cover"
+            width={1766}
+            height={2322}
+            className="w-[200px] lg:w-[260px] h-auto object-cover rounded-2xl"
             priority
           />
         </div>
