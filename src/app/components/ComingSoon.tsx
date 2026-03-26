@@ -1,8 +1,41 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
+const KONAMI = [
+  "ArrowUp", "ArrowUp",
+  "ArrowDown", "ArrowDown",
+  "ArrowLeft", "ArrowRight",
+  "ArrowLeft", "ArrowRight",
+  "b", "a",
+];
+
 export default function ComingSoon() {
+  const [visible, setVisible] = useState(true);
+  const [unlocking, setUnlocking] = useState(false);
+  const progress = useRef<string[]>([]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      progress.current.push(e.key);
+      progress.current = progress.current.slice(-KONAMI.length);
+
+      if (progress.current.join(",") === KONAMI.join(",")) {
+        setUnlocking(true);
+        setTimeout(() => setVisible(false), 600);
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
+  if (!visible) return null;
+
   return (
-    <div className="fixed inset-0 z-[200] bg-cream flex flex-col items-center justify-center px-8">
+    <div
+      className="fixed inset-0 z-[200] bg-cream flex flex-col items-center justify-center px-8 transition-opacity duration-500"
+      style={{ opacity: unlocking ? 0 : 1 }}
+    >
       <div className="text-center max-w-md">
         <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-medium mb-8">
           Bientôt disponible
