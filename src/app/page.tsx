@@ -301,13 +301,19 @@ export default function Home() {
                 <p className="font-serif italic text-base text-ink/50 mb-5">
                   Angèle Ferrere &mdash; (1/2)
                 </p>
-                <p className="text-muted text-[15px] leading-relaxed max-w-md">
+                <p className="text-muted text-[15px] leading-relaxed max-w-md mb-8">
                   La BnF accueille tous les ans des chercheurs associés qui conduisent un travail au
                   plus près de ses collections. Angèle Ferrere, lauréate 2020 de la bourse Louis
                   Roederer pour la photographie, rend compte de son projet qui vise à valoriser
                   l&rsquo;œuvre de photographes femmes dans les collections de la Bibliothèque
                   nationale de France.
                 </p>
+                <iframe
+                  src="/ebook-02.pdf"
+                  className="w-full max-w-2xl border border-ink/10"
+                  style={{ height: "520px" }}
+                  title="Femmes Photographes : Regards sur la Ville et Valorisation d'une Collection"
+                />
               </div>
             </div>
 
