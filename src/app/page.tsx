@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-cream text-ink font-sans">
@@ -213,7 +215,19 @@ export default function Home() {
 
           <SectionLabel label="Biographie" />
 
-          <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1fr_200px] gap-12 lg:gap-20">
+          <div className="mt-14 grid grid-cols-1 lg:grid-cols-[260px_1fr_180px] gap-10 lg:gap-16">
+
+            {/* Portrait */}
+            <div className="shrink-0">
+              <Image
+                src="/picture.jpg"
+                alt="Angèle Ferrere"
+                width={740}
+                height={555}
+                className="w-full object-cover"
+                priority
+              />
+            </div>
 
             {/* Main bio text */}
             <div className="space-y-5">
