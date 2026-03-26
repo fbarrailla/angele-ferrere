@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PDFModal from "@/app/components/PDFModal";
 
 export default function Home() {
   return (
@@ -282,15 +283,14 @@ export default function Home() {
 
             {/* ── Publication 2 ── */}
             <div className="flex flex-col sm:flex-row gap-10 md:gap-16 items-start">
-              <div className="shrink-0">
-                <Image
-                  src="/ebook-02.jpeg"
-                  alt="Femmes photographes : regards sur la ville et valorisation d'une collection"
-                  width={400}
-                  height={533}
-                  className="w-[160px] md:w-[200px] h-auto shadow-md"
-                />
-              </div>
+              <PDFModal
+                coverSrc="/ebook-02.jpeg"
+                coverAlt="Femmes photographes : regards sur la ville et valorisation d'une collection"
+                coverWidth={400}
+                coverHeight={533}
+                pdfSrc="/ebook-02.pdf"
+                title="Femmes Photographes : Regards sur la Ville et Valorisation d'une Collection"
+              />
               <div className="pt-1">
                 <p className="text-[10px] tracking-[0.25em] uppercase text-terracotta font-medium mb-3">
                   Article · Hypotheses / BnF · Novembre 2021
@@ -301,19 +301,13 @@ export default function Home() {
                 <p className="font-serif italic text-base text-ink/50 mb-5">
                   Angèle Ferrere &mdash; (1/2)
                 </p>
-                <p className="text-muted text-[15px] leading-relaxed max-w-md mb-8">
+                <p className="text-muted text-[15px] leading-relaxed max-w-md">
                   La BnF accueille tous les ans des chercheurs associés qui conduisent un travail au
                   plus près de ses collections. Angèle Ferrere, lauréate 2020 de la bourse Louis
                   Roederer pour la photographie, rend compte de son projet qui vise à valoriser
                   l&rsquo;œuvre de photographes femmes dans les collections de la Bibliothèque
                   nationale de France.
                 </p>
-                <iframe
-                  src="/ebook-02.pdf"
-                  className="w-full max-w-2xl border border-ink/10"
-                  style={{ height: "520px" }}
-                  title="Femmes Photographes : Regards sur la Ville et Valorisation d'une Collection"
-                />
               </div>
             </div>
 
