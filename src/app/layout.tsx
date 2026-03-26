@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Instrument_Sans } from "next/font/google";
 import Script from "next/script";
+import ComingSoon from "@/app/components/ComingSoon";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -48,7 +49,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>{children}</body>
+      <body>
+        <ComingSoon />
+        {children}
+      </body>
     </html>
   );
 }
